@@ -1,32 +1,32 @@
 // atwho.css https://github.com/ichord/At.js
 .atwho-view {
-    // position:absolute;
-    // top: 0;
-    // left: 0;
-    // display: none;
-    // margin-top: 18px;
-    // background: white;
-    color: black;
-    // border: 1px solid #DDD;
-    border-radius: 3px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    min-width: 120px;
-    z-index: 11110 !important;
+  // position:absolute;
+  // top: 0;
+  // left: 0;
+  // display: none;
+  // margin-top: 18px;
+  // background: white;
+  color: black;
+  // border: 1px solid #DDD;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  min-width: 120px;
+  z-index: 11110 !important;
 }
 .atwho-ul {
-    /* width: 100px; */
-    list-style:none;
-    // padding:0;
-    // margin:auto;
-    // max-height: 200px;
-    // overflow-y: auto;
+  /* width: 100px; */
+  list-style:none;
+  // padding:0;
+  // margin:auto;
+  // max-height: 200px;
+  // overflow-y: auto;
 }
 .atwho-li {
-    display: block;
-    // padding: 5px 10px;
-    // border-bottom: 1px solid #DDD;
-    // cursor: pointer;
-    /* border-top: 1px solid #C8C8C8; */
+  display: block;
+  // padding: 5px 10px;
+  // border-bottom: 1px solid #DDD;
+  // cursor: pointer;
+  /* border-top: 1px solid #C8C8C8; */
 }
 
 ////// added 1
@@ -72,7 +72,8 @@
   position: relative;
 }
 .atwho-view {
-  position: absolute;
+  //position: absolute;
+  position: fixed;
   bottom: 0;
   left: -0.8em; // 抵消左边距
   cursor: default;

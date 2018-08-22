@@ -2,27 +2,28 @@
 
 <template>
   <div ref="wrap"
-    class="atwho-wrap"
-    @compositionstart="handleCompositionStart"
-    @compositionend="handleCompositionEnd"
-    @input="handleInput()"
-    @keydown="handleKeyDown"
+       class="atwho-wrap"
+       @compositionstart="handleCompositionStart"
+       @compositionend="handleCompositionEnd"
+       @input="handleInput()"
+       @keydown="handleKeyDown"
   >
     <div v-if="atwho"
-      class="atwho-panel"
-      :style="style"
+         id="atwho-panel"
+         class="atwho-panel"
+         :style="style"
     >
       <div class="atwho-inner">
-        <div class="atwho-view">
-          <ul class="atwho-ul">
+        <div id="atwho-view" class="atwho-view" :style="panelStyle">
+          <ul v-if="panelStyle" class="atwho-ul">
             <li v-for="(item, index) in atwho.list"
-              class="atwho-li"
-              :key="index"
-              :class="isCur(index) && 'atwho-cur'"
-              :ref="isCur(index) && 'cur'"
-              :data-index="index"
-              @mouseenter="handleItemHover"
-              @click="handleItemClick"
+                class="atwho-li"
+                :key="index"
+                :class="isCur(index) && 'atwho-cur'"
+                :ref="isCur(index) && 'cur'"
+                :data-index="index"
+                @mouseenter="handleItemHover"
+                @click="handleItemClick"
             >
               <slot name="item" :item="item">
                 <span v-text="itemName(item)"></span>
